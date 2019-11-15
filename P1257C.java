@@ -4,8 +4,8 @@ import java.util.*;
 public class P1257C {
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
-		int[] occ = new int[200000];
-		int[][] rep = new int[200000][2]; 
+		int[] occ = new int[200001];
+		int[][] rep = new int[200001][2]; 
 		int val = 0, prev, i, j, n = 0;
 		int minSubArray = -1;
 		int t = in.nextInt();
