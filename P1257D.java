@@ -18,15 +18,16 @@ public class P1257D {
 					max = monsters[j];
 			}
 			m = in.nextInt();
-			ArrayList<Hero> heroesList = new ArrayList<Hero>();
+			int[] heroesList = new int[n + 1];
 			for (j = 0; j < m; j++) {
 				power = in.nextInt();
 				endur = in.nextInt();
 
 				power = power > max ? max : power;
 				endur = endur > n ? n : endur;
+				heroesList[endur] = Math.max(heroesList[endur], power);
 				//System.out.println(heroesList.size());
-				for (k = heroesList.size() - 1; k >= 0; k--) {
+				/*for (k = heroesList.size() - 1; k >= 0; k--) {
 					hero = heroesList.get(k);
 					if (power > hero.power && endur >= hero.endurance
 							|| power >= hero.power && endur > hero.endurance) {
@@ -44,7 +45,7 @@ public class P1257D {
 
 				if (power != -1 && endur != -1) {
 					heroesList.add(new Hero(power, endur));
-				} 
+				} */
 			}
 			
 			nDays = -1;
