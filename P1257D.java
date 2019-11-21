@@ -48,6 +48,10 @@ public class P1257D {
 				} */
 			}
 			
+			for (j = n - 1; j >=0; j--) {
+				heroesList[j] = Math.max(heroesList[j], heroesList[j + 1]);
+			}
+			
 			nDays = -1;
 			// BFS
 			ArrayList<State> states = new ArrayList<State>();
